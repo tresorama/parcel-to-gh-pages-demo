@@ -1,4 +1,4 @@
-# Step by Step
+# Step by Step Process from Scratch
 
 For this step-by-step guide, your github name is "mister-blue" and the repo we will create is name "wonderful-shadow".
 
@@ -20,18 +20,14 @@ create a `.gitignore` file with this content :
 
 ```bash
 node_modules
-
 dist
-
 .cache
-
 .DS_Store
-
 ```
 
-This prevent from copying unnecessary files when working.
+This prevent from copying unnecessary files over the web when working.
 
-## Create a test Page
+## Create an HTML Page
 
 Create a `index.html` file and put some boiler plate inside it!!
 
@@ -48,13 +44,12 @@ Add in package.json:
 }
 ```
 
-Check if it's working by :
-`npm run start`
+Check if it's working by `npm run start`
 
 ## Configure SASS
 
-Create the file `scss/style.scss`.
-Add simple css rules to test inside that file.
+Create a file `scss/style.scss`.
+Add some css rules inside that file.
 
 Open `index.html` , and add in head `<link rel="stylesheet" href="scss/style.scss">`.
 
@@ -63,6 +58,7 @@ Test if it's working by `npm run start`
 ## Create a GitHub Repo
 
 Create a new GitHub Repo.
+Remember that for this guide you are "mister-blue" and you are creating a GitHub Repo named "wonderful-shadow".
 
 Add your GitHub Repo as a remote named origin.
 `git remote add origin https://github.com/mister-blue/wonderful-shadow.git`.
@@ -72,7 +68,7 @@ This is the syntax:
 
 ### Understand your GitHub Pages Link
 
-IT IS NOT YOUR REPO LINK!
+IT IS NOT YOUR GITHUB REPO LINK!
 
 Go to your repo on GitHub website.
 Go to Settings => Pages.
@@ -86,7 +82,7 @@ The url follow this syntax :
 https://<github-name>.github.io/<github-repo-name>/
 ```
 
-For example , if your github name is "mister-blue" and your repo is named "wonderful-shadow" your **GitHub Pages Link** will be `https://mister-blue.github.io/wonderful-shadow/` .
+In this guide, your **GitHub Pages Link** will be `https://mister-blue.github.io/wonderful-shadow/` .
 
 # Configure Deploy to GitHub Pages
 
@@ -104,9 +100,15 @@ Add in package.json :
 }
 ```
 
-NOTE: replace the --public-url url with your _GitHub Pages Link_, ITS NOT YOUR REPO LINK.
+> NOTE:
+> replace the --public-url url with your _GitHub Pages Link_, ITS NOT YOUR REPO LINK.
 
-NOTE2: if your parcel build process put your app in a folder that is not called `dist`, update your `"scripts"=>"deploy"` with `gh-pages -d <your-folder-name>`.
+> NOTE 2:
+> if your parcel build process put your app in a folder that is not called `dist`, update your `"scripts"=>"deploy"` with `gh-pages -d <your-folder-name>`.
+
+## Deploy!
+
+`npm run deploy`
 
 ## Test your Deployed GitHub Pages
 
