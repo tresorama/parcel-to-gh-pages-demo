@@ -1,0 +1,20 @@
+{
+  "name": "parcel-to-github-page-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./index.html --open",
+    "build": "parcel build ./index.html",
+    "build:gh-pages": "parcel build ./index.html --public-url \"https://tresorama.github.io/parcel-to-gh-pages-demo/\"",
+    "predeploy": "npm run build:gh-pages",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Jacopo Marrone",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.41.1"
+  }
+}
